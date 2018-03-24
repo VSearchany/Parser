@@ -1,0 +1,25 @@
+﻿@model List<ShopsParser.Models.RadioItem>
+
+<table class="table-striped">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td align="center" class="col-lg-4">
+                <div>
+                    <a href=@item.Link>
+                        <img class="thumbnail" style="height:150px; width:150px; margin:auto" src=@item.Picture alt=@item.Name>
+                    </a>
+                </div>
+            </td>
+            <td class="col-lg-4">
+                <h3><a href=@item.Link>@item.Name</a></h3>
+            </td>
+            <td class="col-lg-2">
+                <p>@item.Availability</p>
+            </td>
+            <td class="col-lg-4">
+                <p>Cost: @item.Cost</p>
+            </td>
+        </tr>
+    }
+</table>
